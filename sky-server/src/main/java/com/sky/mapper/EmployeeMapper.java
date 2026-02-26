@@ -35,4 +35,10 @@ public interface EmployeeMapper {
     //需要用到动态标签,所以不使用注解,使用xml进行映射
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 
+    /**
+     * 根据主键动态修改Status
+     * @param employee
+     */
+
+    void update(Employee employee);
 }

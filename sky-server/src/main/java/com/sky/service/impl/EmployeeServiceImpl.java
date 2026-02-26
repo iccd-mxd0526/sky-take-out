@@ -110,5 +110,24 @@ public class EmployeeServiceImpl implements EmployeeService {
         return new PageResult(total,result);
     }
 
+    /**
+     * Service层需要将传过来的数据进行处理
+     * @param status
+     * @param id
+     */
+    @Override
+    public void startOrStop(Integer status, Long id) {
+        //是直接调用mapper层进行处理么?
+        //需要将数据先封装在employee中,传的是实体类
+//        Employee employee = new Employee;
+//        employee.setStatus(status);
+//        employee.setId(id);
+        Employee employee = Employee.builder()//如果Employee类加了Builder构建器的话,还可以利用builder构建对象
+                .status(status)
+                .id(id)
+                .build();
+        employeeMapper.update(employee);
+    }
+
 
 }

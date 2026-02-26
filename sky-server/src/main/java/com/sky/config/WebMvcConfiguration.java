@@ -83,6 +83,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     * 将后端传递给前端的数据,进行统一的转换
     *
     * */
+
     @Override
     protected void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
         log.info("扩展消息转化器------");
