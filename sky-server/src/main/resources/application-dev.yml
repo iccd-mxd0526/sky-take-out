@@ -10,4 +10,5 @@ sky:
     endpoint: oss-cn-beijing.aliyuncs.com
     access-key-id: LTAI5tPgz2b2Hi5CBmYHomAd
     access-key-secret:
+
     bucket-name: java-maxiaodou
